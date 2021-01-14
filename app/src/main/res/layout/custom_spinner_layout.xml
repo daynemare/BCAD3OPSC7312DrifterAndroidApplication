@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/customSpinnerItemLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/ivCustomSpinnerIcon">
+
+        <ImageView
+            android:id="@+id/ivSpinnerLayout"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_directions_car_black_24dp"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/tvSpinnerLayout"
+            android:text="@string/driving"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+    
+    <ImageView
+        android:id="@+id/ivCustomSpinnerIcon"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_drop_down_circle_black_24dp"
+        />
+    
+</RelativeLayout>

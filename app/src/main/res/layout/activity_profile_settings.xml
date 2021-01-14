@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.daynemare.drifterapp.activities.ProfileSettingsActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="412dp"
+        android:layout_height="80dp"
+        android:background="@color/darkBlue"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:paddingTop="10dp"
+
+        android:paddingBottom="10dp"
+        android:text="@string/profile_title"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#ffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/sv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:background="@color/darkBlue"
+        android:isScrollContainer="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/darkBlue"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/lato"
+                android:paddingTop="20dp"
+                android:text="@string/full_name"
+                android:textColor="@color/mapboxWhite"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/etFullName"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:maxLength="50"
+                android:background="@drawable/custom_edit_text"
+                android:drawableStart="@drawable/ic_person_black_24dp"
+                android:ems="10"
+                android:fontFamily="@font/lato"
+                android:hint="@string/please_provide_your_full_name_here"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textColorHint="#FF0000" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/tvMeasTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/lato"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="@string/preferred_measurement_system"
+                android:textColor="@color/mapboxWhite"
+                android:textSize="18sp"
+                app:layout_constraintVertical_bias="0.237" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/btSubmitReg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMeasTitle">
+
+                <RadioButton
+                    android:id="@+id/rbImperial"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:buttonTint="#FFFFFF"
+                    android:fontFamily="@font/lato"
+                    android:text="@string/imperial"
+                    android:textColor="#FFFFFF" />
+
+                <RadioButton
+                    android:id="@+id/rbMetric"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:buttonTint="#FFFFFF"
+                    android:fontFamily="@font/lato"
+                    android:text="@string/metric"
+                    android:textColor="#FFFFFF" />
+
+            </RadioGroup>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/tvStyleChoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/lato"
+                android:paddingTop="20dp"
+                android:text="@string/map_style"
+                android:textColor="@color/mapboxWhite"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvCurrentMapStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/default_text"
+                android:textColor="@color/lightBlue" />
+
+            <Button
+                android:id="@+id/btStyleSelect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/custom_button_enabled"
+                android:fontFamily="@font/lato"
+                android:text="@string/select_style"
+                android:textColor="@color/mapboxWhite" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/tvTransportMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:paddingTop="20dp"
+                android:text="@string/mode_of_transport"
+                android:textColor="@color/mapboxWhite"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/customIconSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/spinner_background" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/tvClear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:paddingTop="20dp"
+                android:text="@string/clear_log_history"
+                android:textColor="@color/mapboxWhite"
+                android:textSize="18sp" />
+
+            <Switch
+                android:id="@+id/swClear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/lightBlue"
+                android:text="@string/no"
+                android:textColor="@color/lightBlue" />
+
+            <Button
+                android:id="@+id/btSaveExit"
+                android:layout_width="137dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_button_outlined"
+                android:fontFamily="@font/lato"
+                android:text="@string/save_and_exit"
+                android:textColor="@color/mapboxWhite"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

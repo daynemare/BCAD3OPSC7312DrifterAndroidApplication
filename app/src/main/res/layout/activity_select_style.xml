@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.daynemare.drifterapp.activities.SelectStyleActivity">
+
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:mapbox_cameraTargetLat="50.84749"
+        mapbox:mapbox_cameraTargetLng="4.35137"
+        mapbox:mapbox_cameraZoom="12"
+        tools:layout_editor_absoluteX="0dp" >
+
+        <Button
+            android:id="@+id/btSaveChanges"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_button_enabled"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/lato"
+            android:textColor="@color/mapboxWhite"
+            android:textSize="14sp"
+            android:text="@string/save_map_style" />
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+
+
+</FrameLayout>
